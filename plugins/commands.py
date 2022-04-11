@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+                InlineKeyboardButton('🤖 Updates', url='https://t.me/+FxSDXMEIt0cyOWU1')
             ],
             [
                 InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -42,8 +42,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🤖My Updates Channel', url='https://t.me/Prosearchx')],[
-            InlineKeyboardButton('🤖 Movie Search Bot', url='https://t.me/Prosearchbot')
+            InlineKeyboardButton('🤖My Updates Channel', url='https://t.me/+FxSDXMEIt0cyOWU1')],[
+            InlineKeyboardButton('🤖 Movie Releases', url='https://t.me/Movies_updates_MT')
            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -81,8 +81,8 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🤖BOT Updates Channel', url='https://t.me/Prosearchx')],[
-            InlineKeyboardButton('🤖Movie Search Bot', url='https://t.me/Prosearchbot')
+            InlineKeyboardButton('🤖BOT Updates Channel', url='https://t.me/+FxSDXMEIt0cyOWU1')],[
+            InlineKeyboardButton('🤖Movie Releases', url='https://t.me/Movies_updates_MT')
            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -237,7 +237,7 @@ async def start(client, message):
         )
                     
 
-@Client.on_message(filters.command('channelpro') & filters.user(ADMINS))
+@Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
            
     """Send basic information of channel"""
@@ -268,7 +268,7 @@ async def channel_info(bot, message):
         os.remove(file)
 
 
-@Client.on_message(filters.command('logspro') & filters.user(ADMINS))
+@Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(bot, message):
     """Send log file"""
     try:
@@ -324,7 +324,7 @@ async def delete(bot, message):
                 await msg.edit('File not found in database')
 
 
-@Client.on_message(filters.command('deleteallpro') & filters.user(ADMINS))
+@Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
     await message.reply_text(
         'This will delete all indexed files.\nDo you want to continue??',
@@ -349,11 +349,11 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('Piracy Is Crime')
+    await message.answer('Piracy')
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
-@Client.on_message(filters.command('settingspro'))
+@Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
