@@ -1,6 +1,7 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-I am a Movie Search BOT.  Just Send Movie name and Year """
+    START_TXT = """𝙷𝙴𝙻𝙾 {} I am a 𝙼𝚘𝚟𝚒𝚎 𝚂𝚎𝚊𝚛𝚌𝚑 𝙱𝙾𝚃 
+
+Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search."""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
