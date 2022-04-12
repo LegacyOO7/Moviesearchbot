@@ -42,7 +42,9 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🤖My Updates Channel', url='https://t.me/+FxSDXMEIt0cyOWU1')],[
+            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/+FxSDXMEIt0cyOWU1')
+        ],[
             InlineKeyboardButton('🤖 Movie Releases', url='https://t.me/Movies_updates_MT')
            
         ]]
