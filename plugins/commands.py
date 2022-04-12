@@ -23,7 +23,6 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/+FxSDXMEIt0cyOWU1')
             ],
             [
